@@ -3,12 +3,46 @@ import React from "react";
 import "./App.css";
 
 import Index from "./view/index.jsx";
+import Poster from "./view/post/postList.jsx";
+
+import { HashRouter as Router, Link, Route } from "react-router-dom";
+
+const About = () => (
+	<div>
+		<h2>About</h2>
+	</div>
+);
+
+const NoMatch = () => (
+	<div>
+		<h2>NoMatch</h2>
+	</div>
+);
 
 function App() {
 	return (
-		<div className="App">
-			<Index></Index>
-		</div>
+		<Router>
+			<div className="App">
+				<div>
+					<div>
+						<Link to="/">Home</Link>
+					</div>
+					<div>
+						<Link to="/about">About</Link>
+					</div>
+					<div>
+						<Link to="/poster">Poster</Link>
+					</div>
+				</div>
+
+				<div>
+					<Route path="/" exact component={Index}></Route>
+					<Route path="/about" component={About}></Route>
+					<Route path="/poster" component={Poster}></Route>
+					<Route component={NoMatch}></Route>
+				</div>
+			</div>
+		</Router>
 	);
 }
 

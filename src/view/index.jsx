@@ -3,6 +3,7 @@ import Login from "./login/lgoin";
 import Comment from "./comment/comment";
 
 import Calculate from "./statusUp/calculator";
+
 export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
