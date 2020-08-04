@@ -13,11 +13,11 @@ const About = () => (
 	</div>
 );
 
-const NoMatch = () => (
-	<div>
-		<h2>NoMatch</h2>
-	</div>
-);
+// const NoMatch = () => (
+// 	<div>
+// 		<h2>NoMatch</h2>
+// 	</div>
+// );
 
 function App() {
 	return (
@@ -31,15 +31,15 @@ function App() {
 						<Link to="/about">About</Link>
 					</div>
 					<div>
-						<Link to="/poster">Poster</Link>
+						<Link to="/poster/1">Poster</Link>
 					</div>
 				</div>
 
 				<div>
 					<Route path="/" exact component={Index}></Route>
 					<Route path="/about" component={About}></Route>
-					<Route path="/poster" component={Poster}></Route>
-					<Route component={NoMatch}></Route>
+					<Route path="/poster/:id" component={Poster}></Route>
+					{/* <Route component={NoMatch}></Route> */}
 				</div>
 			</div>
 		</Router>

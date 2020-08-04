@@ -1,6 +1,6 @@
 import React from "react";
 
-import BoilingVerdict from "./BoilingVerdict";
+// import BoilingVerdict from "./BoilingVerdict";
 
 const scaleNames = {
 	c: "Celsius",
@@ -8,12 +8,12 @@ const scaleNames = {
 };
 
 export default class Calculate extends React.Component {
-	constructor(props) {
-		super(props);
-		// this.state = {
-		// 	temperature: 0,
-		// };
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	// this.state = {
+	// 	// 	temperature: 0,
+	// 	// };
+	// }
 
 	handleChange = (e) => {
 		// this.setState({
